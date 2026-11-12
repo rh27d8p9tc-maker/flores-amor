@@ -58,7 +58,7 @@ function renderCart() {
 $("cartItems").innerHTML = items.map(p => `
     <div class="cart-row">
         <div class="cart-thumb" style="--tone:${p.tone}">
-            <img src="${p.name}" alt="${p.name}">
+            <img src="${p.image}" alt="${p.name}">
         </div>
 
         <div>
