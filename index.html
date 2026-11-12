@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Flores=Amor — цветочная мастерская. Букеты для важных моментов, доставка и забота о каждом цветке.">
+  <title>Flores=Amor — цветочная мастерская</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#home" aria-label="Flores Amor — главная"><span>flores</span><b>=</b><span>amor</span><i>✿</i></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav" aria-label="Главное меню">
+      <a href="#home">Главная</a><a href="#catalog">Каталог</a><a href="#offers">Акции</a>
+      <a href="#about">О магазине</a><a href="#delivery">Доставка и оплата</a><a href="#contacts">Контакты</a>
+    </nav>
+    <button class="cart-open" id="cartOpen" aria-label="Открыть корзину">Корзина <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section class="page active" id="home">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Цветочная мастерская · Flores=Amor</p>
+          <h1>Цветы, которые<br><em>говорят за вас.</em></h1>
+          <p class="hero-text">Собираем букеты с настроением — для признаний, благодарности, маленьких радостей и больших событий. Каждый цветок выбираем внимательно, а каждую композицию создаём вручную.</p>
+          <div class="hero-actions"><a class="btn btn-dark" href="#catalog">Выбрать букет</a><a class="text-link" href="#about">Наша история <span>↗</span></a></div>
+          <div class="hero-note"><span>✳</span> Свежие цветы и бережная доставка</div>
+        </div>
+        <div class="hero-art" role="img" aria-label="Иллюстрация букета цветов">
+          <div class="art-circle"></div><div class="flower flower-one">✿</div><div class="flower flower-two">✽</div>
+          <div class="flower flower-three">❀</div><div class="flower flower-four">✿</div>
+          <div class="art-label">made with<br>love</div>
+        </div>
+      </div>
+      <div class="benefits">
+        <div><span>01</span><b>Свежесть</b><small>Тщательно отбираем цветы</small></div>
+        <div><span>02</span><b>С душой</b><small>Собираем каждый букет вручную</small></div>
+        <div><span>03</span><b>Удобно</b><small>Помогаем выбрать и оформить заказ</small></div>
+      </div>
+      <div class="section-heading"><div><p class="eyebrow">Выбор мастерской</p><h2>Букеты с характером</h2></div><a class="text-link" href="#catalog">Весь каталог ↗</a></div>
+      <div class="product-grid featured-grid" id="featuredProducts"></div>
+    </section>
+
+    <section class="page" id="catalog">
+      <div class="page-intro"><p class="eyebrow">Найдите свой букет</p><h1>Каталог цветов</h1><p>От нежных композиций до ярких авторских букетов. Выберите настроение, а мы позаботимся об остальном.</p></div>
+      <div class="catalog-tools">
+        <input id="searchInput" type="search" placeholder="Поиск по названию…" aria-label="Поиск букетов">
+        <select id="categoryFilter" aria-label="Фильтр по категории"><option value="all">Все категории</option><option value="Нежные">Нежные</option><option value="Яркие">Яркие</option><option value="Классика">Классика</option><option value="Авторские">Авторские</option></select>
+        <select id="sortFilter" aria-label="Сортировка"><option value="default">Сначала популярные</option><option value="low">Сначала дешевле</option><option value="high">Сначала дороже</option></select>
+      </div>
+      <p class="results-count" id="resultsCount"></p>
+      <div class="product-grid" id="catalogProducts"></div>
+      <p class="empty-state hidden" id="emptyState">Ничего не найдено. Попробуйте изменить запрос или категорию.</p>
+    </section>
+
+    <section class="page" id="offers">
+      <div class="page-intro"><p class="eyebrow">Повод порадовать</p><h1>Особенные предложения</h1><p>Небольшие приятности, чтобы дарить цветы чаще. Предложения действуют в рамках учебной демонстрации сайта.</p></div>
+      <div class="offer-grid">
+        <article class="offer-card offer-pink"><span class="offer-mark">✿</span><p class="eyebrow">Для первого знакомства</p><h2>−10% на первый заказ</h2><p>Выберите любой букет из каталога и добавьте в заказ промокод <b>HELLO10</b>.</p><a href="#catalog" class="btn btn-dark">Выбрать букет</a></article>
+        <article class="offer-card offer-green"><span class="offer-mark">✳</span><p class="eyebrow">Для близких</p><h2>Открытка в подарок</h2><p>К каждому букету можно добавить небольшое послание. Просто укажите текст в комментарии к заказу.</p><a href="#catalog" class="btn btn-outline">Посмотреть каталог</a></article>
+      </div>
+    </section>
+
+    <section class="page" id="about">
+      <div class="page-intro"><p class="eyebrow">Немного о нас</p><h1>Красота — в деталях</h1></div>
+      <div class="about-layout">
+        <div class="about-visual"><div class="about-stamp">F<br><small>=</small><br>A</div><span>Flores=Amor</span></div>
+        <div class="about-copy"><h2>Цветы — это простой способ сказать важное.</h2>
+          <p>Flores=Amor — концепция небольшой цветочной мастерской, в которой главное место занимают внимание, искренность и красота живых цветов. Мы верим, что букет не должен быть просто набором растений: он может передавать настроение, напоминать о человеке и сохранять атмосферу особенного дня.</p>
+          <p>В основе нашей философии — индивидуальный подход. Для кого-то идеальный букет — это спокойные пастельные оттенки, для кого-то — смелое сочетание фактур и ярких красок. Поэтому мы предлагаем разные стили и помогаем подобрать композицию под повод, характер и пожелания получателя.</p>
+          <p>Мы уделяем внимание не только внешнему виду, но и деталям: аккуратной упаковке, гармонии оттенков и понятному оформлению заказа. Нам хочется, чтобы знакомство с Flores=Amor было таким же приятным, как момент, когда человек получает цветы.</p>
+          <p>Название Flores=Amor объединяет цветы и любовь — два понятных без перевода символа внимания. Наша цель — сделать выбор букета лёгким, а сам подарок — запоминающимся.</p>
+        </div>
+      </div>
+      <div class="gallery-heading"><p class="eyebrow">Цветочное настроение</p><h2>Вдохновение в каждом лепестке</h2></div>
+      <div class="gallery">
+        <div class="gallery-tile tile-a"><span>Нежность</span></div><div class="gallery-tile tile-b"><span>Тепло</span></div><div class="gallery-tile tile-c"><span>Радость</span></div>
+      </div>
+      <p class="photo-note">Иллюстративная галерея создана средствами CSS. Для выполнения требования об оригинальной фотографии замените один из блоков снимком собственного букета или вашей работы.</p>
+    </section>
+
+    <section class="page" id="delivery">
+      <div class="page-intro"><p class="eyebrow">Всё просто</p><h1>Доставка и оплата</h1><p>Продумали понятный путь от выбора букета до получения заказа.</p></div>
+      <div class="steps">
+        <article><span>01</span><h3>Выберите букет</h3><p>Добавьте понравившиеся композиции в корзину и проверьте количество.</p></article>
+        <article><span>02</span><h3>Оформите заказ</h3><p>Укажите имя, телефон, адрес и удобное время получения.</p></article>
+        <article><span>03</span><h3>Подтвердите детали</h3><p>В демонстрационной версии заказ формируется на сайте без реального списания средств.</p></article>
+      </div>
+      <div class="delivery-columns"><div><h2>Доставка</h2><p>В учебном макете доставка представлена как демонстрационная услуга. Реальные сроки, стоимость и зона доставки должны быть согласованы с владельцем магазина перед публикацией.</p></div><div><h2>Оплата</h2><p>На сайте реализована демонстрация шага оплаты. Банковские данные не запрашиваются и платежи не проводятся. Для настоящего магазина потребуется подключить платёжный сервис.</p></div></div>
+    </section>
+
+    <section class="page" id="contacts">
+      <div class="page-intro"><p class="eyebrow">Мы на связи</p><h1>Давайте поговорим</h1><p>Оставьте сообщение — форма проверит заполнение и покажет подтверждение отправки.</p></div>
+      <div class="contact-layout">
+        <div class="contact-info"><h2>Flores=Amor</h2><p>Цветочная мастерская для важных моментов.</p><div class="contact-line"><small>Телефон</small><a href="tel:+79991234567">+7 (999) 123-45-67</a></div><div class="contact-line"><small>Почта</small><a href="mailto:hello@flores-amor.example">hello@flores-amor.example</a></div><div class="contact-line"><small>Социальные сети</small><a href="https://t.me/" target="_blank" rel="noopener">Telegram ↗</a> · <a href="https://vk.com/" target="_blank" rel="noopener">ВКонтакте ↗</a></div><p class="placeholder-note">Контактные данные демонстрационные — замените их на реальные перед публикацией.</p></div>
+        <form id="contactForm" class="form-card">
+          <label>Ваше имя<input name="name" required minlength="2" placeholder="Как к вам обращаться?"></label>
+          <label>Email<input name="email" type="email" required placeholder="name@example.com"></label>
+          <label>Сообщение<textarea name="message" required minlength="5" rows="4" placeholder="Расскажите, какой букет ищете…"></textarea></label>
+          <button class="btn btn-dark" type="submit">Отправить сообщение</button><p class="form-status" id="contactStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="page" id="cart">
+      <div class="page-intro"><p class="eyebrow">Ваш выбор</p><h1>Корзина</h1><p>Проверьте состав заказа и количество букетов.</p></div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-summary"><span>Итого</span><strong id="cartTotal">0 ₽</strong><button class="btn btn-dark" id="checkoutBtn">Перейти к оформлению</button></div>
+      <p class="empty-state hidden" id="cartEmpty">Корзина пока пуста. Самое время выбрать букет.</p>
+    </section>
+
+    <section class="page" id="checkout">
+      <div class="page-intro"><p class="eyebrow">Последний шаг</p><h1>Оформление заказа</h1><p>Заполните данные получателя. Это демонстрационная форма без реальной оплаты.</p></div>
+      <div class="checkout-layout">
+        <form id="checkoutForm" class="form-card">
+          <label>Имя получателя<input name="customer" required minlength="2" placeholder="Имя"></label>
+          <label>Телефон<input name="phone" type="tel" required pattern="[+0-9() -]{7,}" placeholder="+7 (___) ___-__-__"></label>
+          <label>Email<input name="email" type="email" required placeholder="name@example.com"></label>
+          <label>Адрес доставки<input name="address" required minlength="5" placeholder="Улица, дом, квартира"></label>
+          <label>Комментарий к заказу<textarea name="comment" rows="3" placeholder="Пожелания к букету или доставке"></textarea></label>
+          <button class="btn btn-dark" type="submit">Подтвердить заказ</button>
+        </form>
+        <aside class="order-card"><p class="eyebrow">Ваш заказ</p><div id="checkoutSummary"></div><div class="order-total"><span>Итого</span><b id="checkoutTotal">0 ₽</b></div><p class="placeholder-note">Оплата здесь не производится. Не вводите данные банковской карты.</p></aside>
+      </div>
+    </section>
+
+    <section class="page success-page" id="success">
+      <div class="success-symbol">✓</div><p class="eyebrow">Flores=Amor</p><h1>Спасибо за заказ!</h1><p>Ваш демонстрационный заказ успешно оформлен. В реальном магазине менеджер связался бы с вами для подтверждения деталей.</p><a class="btn btn-dark" href="#home">Вернуться на главную</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="logo footer-logo" href="#home"><span>flores</span><b>=</b><span>amor</span><i>✿</i></a>
+    <p>Цветы для слов, которые хочется сказать.</p>
+    <div class="social-links"><a href="https://t.me/" target="_blank" rel="noopener" aria-label="Telegram">tg</a><a href="https://vk.com/" target="_blank" rel="noopener" aria-label="ВКонтакте">vk</a></div>
+    <small>© <span id="year"></span> Flores=Amor. Учебный проект.</small>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
